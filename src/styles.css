@@ -103,10 +103,10 @@ h1 {
   left: var(--x);
   top: var(--y);
   display: flex;
-  width: min(210px, 34vw);
-  min-height: 86px;
+  width: max-content;
+  max-width: min(210px, 34vw);
   gap: 12px;
-  padding: 14px;
+  padding: 10px 12px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.86);
@@ -152,6 +152,7 @@ h1 {
   color: #6e9277;
   font-size: 1.05rem;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .place-card p,
@@ -195,6 +196,23 @@ h1 {
   grid-column: 2;
 }
 
+.history-card-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.history-card {
+  padding: 10px 12px;
+  border: 1px solid rgba(110, 146, 119, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.56);
+  color: #4c6262;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 @keyframes pulse {
   50% {
     opacity: 0.72;
@@ -228,9 +246,8 @@ h1 {
   }
 
   .place-card {
-    width: 168px;
-    min-height: 76px;
-    padding: 11px;
+    max-width: 168px;
+    padding: 9px 10px;
     gap: 9px;
   }
 

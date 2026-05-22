@@ -1,6 +1,7 @@
 import { StrictMode, type CSSProperties } from "react";
 import { createRoot } from "react-dom/client";
 import { BriefcaseBusiness, GraduationCap, MapPin } from "lucide-react";
+import { HistoryCards } from "./history_cards";
 import mapIdenticalUrl from "../map-identical.svg";
 import "./styles.css";
 
@@ -12,6 +13,7 @@ type Place = {
   y: number;
   icon: "study" | "work" | "home";
   details: string;
+  items: string[];
 };
 
 const places: Place[] = [
@@ -22,7 +24,12 @@ const places: Place[] = [
     x: 31.34,
     y: 84.75,
     icon: "home",
-    details: "A calm starting point shaped by lake, mountains, and a grounded way of thinking.",
+    details: "A calm place shaped by lake, mountains and a grounded way of thinking.",
+    items: [
+      "Commercial apprenticeship",
+      "Vocational Baccalaureate (University Entrance Qualification)",
+      "HR-Departement",
+    ],
   },
   {
     city: "Rotkreuz",
@@ -32,6 +39,7 @@ const places: Place[] = [
     y: 40.22,
     icon: "study",
     details: "A place for building skills, connecting ideas, and turning curiosity into craft.",
+    items: ["BSC. Business Informatics"],
   },
   {
     city: "Adliswil",
@@ -40,7 +48,8 @@ const places: Place[] = [
     x: 55.34,
     y: 10.93,
     icon: "work",
-    details: "Close to Zurich energy: focused, collaborative, and ready for the next professional chapter.",
+    details: "A place for focused and collaborative work.",
+    items: ["Student Assistent Marketing"],
   },
 ];
 
@@ -85,18 +94,7 @@ const App = () => {
           ))}
         </div>
 
-        <div className="storyline" aria-label="CV storyline">
-          {places.map((place) => (
-            <article className="story-item" key={place.city}>
-              <div className="story-heading">
-                <Icon icon={place.icon} />
-                <h2>{place.city}</h2>
-                <span>{place.years}</span>
-              </div>
-              <p>{place.details}</p>
-            </article>
-          ))}
-        </div>
+        <HistoryCards places={places} />
       </section>
     </main>
   );
