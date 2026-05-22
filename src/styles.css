@@ -85,8 +85,9 @@ h1 {
   overflow: hidden;
   border: 1px solid rgba(29, 79, 96, 0.16);
   border-radius: 8px;
-  background: #edf3ea;
+  background: #edf2e8;
   box-shadow: 0 24px 60px rgba(22, 35, 38, 0.16);
+  aspect-ratio: 1493 / 1054;
 }
 
 .map-art {
@@ -94,19 +95,7 @@ h1 {
   height: 100%;
   min-height: 560px;
   display: block;
-}
-
-.route {
-  stroke: #d85d43;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-dasharray: 2 2.4;
-}
-
-.map-marker {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: pulse 2.5s ease-in-out infinite;
+  object-fit: cover;
 }
 
 .place-card {
@@ -122,22 +111,22 @@ h1 {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 12px 28px rgba(22, 35, 38, 0.18);
-  transform: translate(-14px, -112%);
+  transform: translate(16px, -50%);
   backdrop-filter: blur(12px);
 }
 
 .place-rotkreuz {
-  transform: translate(-72%, 18px);
+  transform: translate(16px, -50%);
 }
 
 .place-adliswil {
-  transform: translate(-94%, -112%);
+  transform: translate(16px, -18px);
 }
 
 .place-icon,
 .story-heading svg {
   flex: 0 0 auto;
-  color: #1d4f60;
+  color: #496f58;
 }
 
 .place-icon {
@@ -145,8 +134,9 @@ h1 {
   width: 34px;
   height: 34px;
   place-items: center;
+  border: 1px solid #bdd1bc;
   border-radius: 50%;
-  background: #f8d568;
+  background: #d7e5d1;
 }
 
 .place-card span,
@@ -159,6 +149,7 @@ h1 {
 
 .place-card h2 {
   margin-bottom: 2px;
+  color: #6e9277;
   font-size: 1.05rem;
   line-height: 1.1;
 }
@@ -196,6 +187,7 @@ h1 {
 
 .story-heading h2 {
   margin-bottom: 0;
+  color: #6e9277;
   font-size: 1.2rem;
 }
 
@@ -256,14 +248,14 @@ h1 {
   }
 
   .place-sarnen {
-    transform: translate(-18px, -112%);
+    transform: translate(14px, -50%);
   }
 
   .place-rotkreuz {
-    transform: translate(-54%, 18px);
+    transform: translate(14px, -50%);
   }
 
   .place-adliswil {
-    transform: translate(-88%, -112%);
+    transform: translate(-104%, -12px);
   }
 }
