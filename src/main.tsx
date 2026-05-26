@@ -111,6 +111,17 @@ const App = () => {
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
   const selectedPlace = places.find((place) => place.id === selectedPlaceId) ?? null;
 
+  const handlePlaceSelect = (placeId: string) => {
+    setSelectedPlaceId(placeId);
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("selected-place-details")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
   return (
     <main className="page-shell">
       <section className="intro">
@@ -140,7 +151,7 @@ const App = () => {
                 type="button"
                 aria-pressed={isSelected}
                 aria-controls="selected-place-details"
-                onClick={() => setSelectedPlaceId(place.id)}
+                onClick={() => handlePlaceSelect(place.id)}
               >
                 <span className="place-icon">
                   <Icon icon={place.icon} />
