@@ -41,7 +41,7 @@ const places: Place[] = [
         dateRange: "Aug 2016 - Jul 2019",
       },
       {
-        title: "Vocational Baccalaureate",
+        title: "Vocational Baccalaureate University Entrance Qualification",
         organization: "BWZ Obwalden",
         dateRange: "Aug 2019 - Jul 2020",
       },
