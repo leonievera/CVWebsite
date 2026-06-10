@@ -3,6 +3,7 @@ import {
   Bike,
   BriefcaseBusiness,
   ChefHat,
+  Code2,
   Database,
   Mountain,
   Scissors,
@@ -18,7 +19,7 @@ import skiingImage from "./assets/interests/skiing.jpg";
 
 type SkillGroup = {
   title: string;
-  icon: "data" | "modeling" | "delivery";
+  icon: "data" | "programming" | "modeling" | "delivery";
   skills: string[];
 };
 
@@ -39,7 +40,12 @@ const skillGroups: SkillGroup[] = [
   {
     title: "Data",
     icon: "data",
-    skills: ["SQL", "Python", "R", "Datamanagement"],
+    skills: ["Datamanagement", "RDBMS", "PostgreSQL", "REST API"],
+  },
+  {
+    title: "Languages",
+    icon: "programming",
+    skills: ["Java", "Python", "R"],
   },
   {
     title: "Modeling",
@@ -85,6 +91,7 @@ const interests: Interest[] = [
 
 const SkillIcon = ({ icon }: { icon: SkillGroup["icon"] }) => {
   if (icon === "data") return <Database size={20} aria-hidden="true" />;
+  if (icon === "programming") return <Code2 size={20} aria-hidden="true" />;
   if (icon === "modeling") return <Workflow size={20} aria-hidden="true" />;
   return <BriefcaseBusiness size={20} aria-hidden="true" />;
 };
