@@ -37,7 +37,7 @@ const places: Place[] = [
     entries: [
       {
         title: "Apprenticeship Commercial Employee",
-        organization: "Social Security",
+        organization: "Ausgleichskasse Obwalden",
         dateRange: "Aug 2016 - Jul 2019",
       },
       {
